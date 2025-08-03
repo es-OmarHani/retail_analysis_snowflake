@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: retail_db
+    database: retail_db
+    schema: retail_schema
+    description: "Retail data source containing dimension and fact tables for sales analysis."
+    
+    tables:
+      - name: dim_customers
+        description: "Customer dimension table with customer info, email, region, and signup date."
+
+      - name: dim_products
+        description: "Product dimension table with product name, category, and price."
+
+      - name: dim_stores
+        description: "Store dimension table with store name, city, and address."
+
+      - name: dim_employees
+        description: "Employee dimension table including department, employment type, and store assignment."
+
+      - name: dim_time
+        description: "Time dimension table with date, year, month, quarter, and day of week."
+
+      - name: fact_sales
+        description: "Fact table for recording customer sales across products and stores."
+
+      - name: fact_inventory
+        description: "Fact table for tracking inventory levels per product and store."
